@@ -33,6 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
     const mobileLinks = document.querySelectorAll('.mobile-link');
+    
+    // Services dropdown w mobile
+    const mobileServicesBtn = document.getElementById('mobile-services-btn');
+    const mobileServicesMenu = document.getElementById('mobile-services-menu');
+    const mobileServicesIcon = document.getElementById('mobile-services-icon');
 
     function toggleMenu() {
         if (mobileMenu) {
@@ -46,6 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             toggleMenu();
+        });
+    }
+
+    if (mobileServicesBtn && mobileServicesMenu) {
+        mobileServicesBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileServicesMenu.classList.toggle('hidden');
+            mobileServicesMenu.classList.toggle('flex');
+            mobileServicesIcon.classList.toggle('rotate-180');
         });
     }
 

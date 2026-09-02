@@ -27,7 +27,7 @@
                 <img src="./Logo/Logo-horizontal-primary.svg" alt="Clean Art Works" class="h-8 md:h-11 w-auto" />
             </a>
 
-            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-body text-gray-700">
+            <nav class="hidden lg:flex items-center gap-6 lg:gap-8 text-body text-gray-700">
                 <a href="index.html" class="hover:text-brand transition-colors">Home</a>
                 <a href="about.html" class="hover:text-brand transition-colors">About Us</a>
                 
@@ -52,13 +52,13 @@
             </nav>
 
             <div class="flex items-center gap-3">
-                <a href="tel:6309352525" class="hidden md:inline-flex btn-primary">
+                <a href="tel:6309352525" class="hidden lg:inline-flex btn-primary">
                     <span>(630) 935-2525</span>
                     <div class="btn-icon">
                         <i data-lucide="phone" class="w-4 h-4"></i>
                     </div>
                 </a>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none bg-brand-light rounded-full">
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-800 focus:outline-none bg-brand-light rounded-full">
                     <i data-lucide="menu" id="menu-icon" class="w-5 h-5"></i>
                     <i data-lucide="x" id="close-icon" class="w-5 h-5 hidden"></i>
                 </button>
@@ -70,14 +70,16 @@
         <a href="index.html" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Home</a>
         <a href="about.html" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">About Us</a>
         
-        <div class="px-4 py-2">
-            <div class="text-gray-400 text-body-sm uppercase tracking-wider mb-2">Services</div>
-            <div class="flex flex-col gap-1 border-l-2 border-brand-light pl-4">
-                <a href="window-cleaning.html" class="text-body py-3 text-gray-800 hover:text-brand mobile-link transition-colors">Window Cleaning</a>
-                <a href="gutter-cleaning.html" class="text-body py-3 text-gray-800 hover:text-brand mobile-link transition-colors">Gutter Cleaning</a>
+        <div class="flex flex-col">
+            <button id="mobile-services-btn" class="w-full flex items-center justify-between text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl transition-colors focus:outline-none">
+                Services <i data-lucide="chevron-down" id="mobile-services-icon" class="w-4 h-4 transition-transform"></i>
+            </button>
+            <div id="mobile-services-menu" class="hidden flex-col gap-1 pl-4 pr-4 pb-2 border-l-2 border-brand/20 ml-6 mt-1">
+                <a href="window-cleaning.html" class="text-body p-3 text-gray-700 hover:bg-brand/5 rounded-xl mobile-link transition-colors">Window Cleaning</a>
+                <a href="gutter-cleaning.html" class="text-body p-3 text-gray-700 hover:bg-brand/5 rounded-xl mobile-link transition-colors">Gutter Cleaning</a>
             </div>
         </div>
-
+        
         <a href="index.html#reviews" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Testimonials</a>
         <a href="index.html#faq" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">FAQ's</a>
         <a href="index.html#kontakt" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Contact</a>
