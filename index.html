@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Window & Gutter Cleaning in Chicago | Clean Art Works</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Core External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Theme & Design System config -->
+    <script src="./theme.js"></script>
+    <script src="animations.js" defer></script>
+</head>
+<body class="font-sans text-gray-600 selection:bg-brand-light selection:text-brand-dark relative overflow-x-hidden">
+
+    <header class="fixed top-6 left-0 w-full z-50 transition-all duration-300" id="main-header">
+    <div class="container-full">
+        <div id="header-inner" class="w-full bg-white/90 backdrop-blur-xl rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-white pl-6 pr-2 py-2 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="./Logo/Logo-horizontal-primary.svg" alt="Clean Art Works" class="h-8 md:h-11 w-auto" />
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-body text-gray-700">
+                <a href="index.html" class="hover:text-brand transition-colors">Home</a>
+                <a href="about.html" class="hover:text-brand transition-colors">About Us</a>
+                
+                <!-- Dropdown Services -->
+                <div class="relative group py-2">
+                    <button class="text-body flex items-center gap-1 hover:text-brand transition-colors focus:outline-none">
+                        Services <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 bg-white rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-focus-within:opacity-100 group-hover:visible group-focus-within:visible transition-all duration-300 flex flex-col p-2 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto">
+                        <a href="window-cleaning.html" class="text-body px-4 py-3 text-gray-700 hover:bg-brand/5 hover:text-brand rounded-xl transition-colors flex items-center justify-between group/link">
+                            Window Cleaning <i data-lucide="arrow-right" class="w-4 h-4 opacity-0 -translate-x-2 transition-all group-hover/link:opacity-100 group-hover/link:translate-x-0"></i>
+                        </a>
+                        <a href="gutter-cleaning.html" class="text-body px-4 py-3 text-gray-700 hover:bg-brand/5 hover:text-brand rounded-xl transition-colors flex items-center justify-between group/link">
+                            Gutter Cleaning <i data-lucide="arrow-right" class="w-4 h-4 opacity-0 -translate-x-2 transition-all group-hover/link:opacity-100 group-hover/link:translate-x-0"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="index.html#reviews" class="hover:text-brand transition-colors">Testimonials</a>
+                <a href="index.html#faq" class="hover:text-brand transition-colors">FAQ's</a>
+                <a href="index.html#kontakt" class="hover:text-brand transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="tel:6309352525" class="hidden md:inline-flex btn-primary">
+                    <span>(630) 935-2525</span>
+                    <div class="btn-icon">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                    </div>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none bg-brand-light rounded-full">
+                    <i data-lucide="menu" id="menu-icon" class="w-5 h-5"></i>
+                    <i data-lucide="x" id="close-icon" class="w-5 h-5 hidden"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden absolute top-20 left-4 right-4 bg-white rounded-3xl shadow-xl border border-gray-100 p-4 flex flex-col gap-2 z-50">
+        <a href="index.html" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Home</a>
+        <a href="about.html" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">About Us</a>
+        
+        <div class="px-4 py-2">
+            <div class="text-gray-400 text-body-sm uppercase tracking-wider mb-2">Services</div>
+            <div class="flex flex-col gap-1 border-l-2 border-brand-light pl-4">
+                <a href="window-cleaning.html" class="text-body py-3 text-gray-800 hover:text-brand mobile-link transition-colors">Window Cleaning</a>
+                <a href="gutter-cleaning.html" class="text-body py-3 text-gray-800 hover:text-brand mobile-link transition-colors">Gutter Cleaning</a>
+            </div>
+        </div>
+
+        <a href="index.html#reviews" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Testimonials</a>
+        <a href="index.html#faq" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">FAQ's</a>
+        <a href="index.html#kontakt" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Contact</a>
+        
+        <a href="tel:6309352525" class="text-body font-medium flex items-center justify-center gap-2 bg-brand text-white p-4 rounded-full mt-2">
+            <i data-lucide="phone" class="w-5 h-5"></i> Call: (630) 935-2525
+        </a>
+    </div>
+</header>
+
+    <section class="p-5 relative pt-40 pb-16 bg-gradient-to-b from-[#CEDEF9] to-white overflow-hidden">
+        
+        <div class="container-default relative z-10 mb-16">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                <div class="text-left lg:col-span-7 xl:col-span-8">
+                    <div class="inline-flex items-center gap-2 text-brand font-heading text-body-sm mb-6">
+                        <i data-lucide="star" class="w-5 h-5 text-accent fill-accent"></i>
+                        4.9/5 star on Trustpilot
+                    </div>
+                    
+                    <h1 class="text-display-hero text-gray-900">
+                        Professional <br/>
+                        <span class="text-brand font-medium">Window & Gutter</span><br/>
+                        Cleaning in Chicago.
+                    </h1>
+                </div>
+                
+                <div class="text-left lg:pt-16 max-w-lg lg:col-span-5 xl:col-span-4">
+                    <p class="text-body-lg text-gray-700 mb-8">
+                        Since 2003, we've been bringing clarity to homes and businesses. Transparent pricing, a trusted team, and fully insured.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-8 items-center mt-2">
+                        <a href="#kontakt" class="btn-primary group">
+                            <span>Get a Quote</span>
+                            <div class="btn-icon">
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </a>
+                        <a href="window-cleaning.html" class="btn-text text-gray-900 text-body-lg">
+                            View Pricing <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full relative z-10 mb-24 overflow-hidden group/slider-container">
+            <div class="slider-track group pl-6 lg:pl-8" id="hero-slider">
+                <!-- SET 1 -->
+                <a href="#services" class="slide focus:outline-none focus-visible:ring-4 focus-visible:ring-accent relative h-[420px] rounded-[32px] overflow-hidden cursor-pointer group/card flex-shrink-0 block">
+                    <img src="./Photos/services-window-cleaning.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[700ms] ease-out-expo group-hover/card:scale-[1.03]" alt="Window Cleaning" onerror="this.src='https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=800'" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent opacity-90 transition-opacity"></div>
+                    <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20">
+                        <div class="translate-y-8 group-hover/card:-translate-y-2 transition-transform duration-[500ms] ease-out-expo flex flex-col justify-end h-full">
+                            <h3 class="text-h3 text-white mb-2">Window Cleaning</h3>
+                            <p class="text-body-sm text-gray-200 mb-4">Crystal clear interior & exterior.</p>
+                            <div class="opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-[400ms] ease-out-expo delay-[50ms]">
+                                <span class="btn-secondary btn-sm w-max self-start">
+                                    Read more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#services" class="slide focus:outline-none focus-visible:ring-4 focus-visible:ring-accent relative h-[420px] rounded-[32px] overflow-hidden cursor-pointer group/card flex-shrink-0 block">
+                    <img src="./Photos/services-gutter-cleaning.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[700ms] ease-out-expo group-hover/card:scale-[1.03]" alt="Gutter Cleaning" onerror="this.src='./Photos/services-gutter-cleaning.png'" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent opacity-90 transition-opacity"></div>
+                    <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20">
+                        <div class="translate-y-8 group-hover/card:-translate-y-2 transition-transform duration-[500ms] ease-out-expo flex flex-col justify-end h-full">
+                            <h3 class="text-h3 text-white mb-2">Gutter Cleaning</h3>
+                            <p class="text-body-sm text-gray-200 mb-4">Safe, hand-cleaned by pros.</p>
+                            <div class="opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-[400ms] ease-out-expo delay-[50ms]">
+                                <span class="btn-secondary btn-sm w-max self-start">
+                                    Read more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#services" class="slide focus:outline-none focus-visible:ring-4 focus-visible:ring-accent relative h-[420px] rounded-[32px] overflow-hidden cursor-pointer group/card flex-shrink-0 block">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[700ms] ease-out-expo group-hover/card:scale-[1.03]" alt="Residential Cleaning" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800'" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent opacity-90 transition-opacity"></div>
+                    <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20">
+                        <div class="translate-y-8 group-hover/card:-translate-y-2 transition-transform duration-[500ms] ease-out-expo flex flex-col justify-end h-full">
+                            <h3 class="text-h3 text-white mb-2">Residential</h3>
+                            <p class="text-body-sm text-gray-200 mb-4">Respect for your private home.</p>
+                            <div class="opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-[400ms] ease-out-expo delay-[50ms]">
+                                <span class="btn-secondary btn-sm w-max self-start">
+                                    Read more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#services" class="slide focus:outline-none focus-visible:ring-4 focus-visible:ring-accent relative h-[420px] rounded-[32px] overflow-hidden cursor-pointer group/card flex-shrink-0 block">
+                    <img src="./Photos/services-commercial.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[700ms] ease-out-expo group-hover/card:scale-[1.03]" alt="Commercial Cleaning" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800'" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent opacity-90 transition-opacity"></div>
+                    <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20">
+                        <div class="translate-y-8 group-hover/card:-translate-y-2 transition-transform duration-[500ms] ease-out-expo flex flex-col justify-end h-full">
+                            <h3 class="text-h3 text-white mb-2">Commercial</h3>
+                            <p class="text-body-sm text-gray-200 mb-4">Reliable service for business.</p>
+                            <div class="opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-[400ms] ease-out-expo delay-[50ms]">
+                                <span class="btn-secondary btn-sm w-max self-start">
+                                    Read more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- SET 2 -->
+                <a href="#services" class="slide focus:outline-none focus-visible:ring-4 focus-visible:ring-accent relative h-[420px] rounded-[32px] overflow-hidden cursor-pointer group/card flex-shrink-0 block">
+                    <img src="./Photos/services-window-cleaning.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[700ms] ease-out-expo group-hover/card:scale-[1.03]" alt="Window Cleaning" onerror="this.src='https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=800'" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent opacity-90 transition-opacity"></div>
+                    <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20">
+                        <div class="translate-y-8 group-hover/card:-translate-y-2 transition-transform duration-[500ms] ease-out-expo flex flex-col justify-end h-full">
+                            <h3 class="text-h3 text-white mb-2">Window Cleaning</h3>
+                            <p class="text-body-sm text-gray-200 mb-4">Crystal clear interior & exterior.</p>
+                            <div class="opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-[400ms] ease-out-expo delay-[50ms]">
+                                <span class="btn-secondary btn-sm w-max self-start">
+                                    Read more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#services" class="slide focus:outline-none focus-visible:ring-4 focus-visible:ring-accent relative h-[420px] rounded-[32px] overflow-hidden cursor-pointer group/card flex-shrink-0 block">
+                    <img src="./Photos/services-gutter-cleaning.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[700ms] ease-out-expo group-hover/card:scale-[1.03]" alt="Gutter Cleaning" onerror="this.src='./Photos/services-gutter-cleaning.png'" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent opacity-90 transition-opacity"></div>
+                    <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20">
+                        <div class="translate-y-8 group-hover/card:-translate-y-2 transition-transform duration-[500ms] ease-out-expo flex flex-col justify-end h-full">
+                            <h3 class="text-h3 text-white mb-2">Gutter Cleaning</h3>
+                            <p class="text-body-sm text-gray-200 mb-4">Safe, hand-cleaned by pros.</p>
+                            <div class="opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-[400ms] ease-out-expo delay-[50ms]">
+                                <span class="btn-secondary btn-sm w-max self-start">
+                                    Read more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#services" class="slide focus:outline-none focus-visible:ring-4 focus-visible:ring-accent relative h-[420px] rounded-[32px] overflow-hidden cursor-pointer group/card flex-shrink-0 block">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[700ms] ease-out-expo group-hover/card:scale-[1.03]" alt="Residential Cleaning" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800'" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent opacity-90 transition-opacity"></div>
+                    <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20">
+                        <div class="translate-y-8 group-hover/card:-translate-y-2 transition-transform duration-[500ms] ease-out-expo flex flex-col justify-end h-full">
+                            <h3 class="text-h3 text-white mb-2">Residential</h3>
+                            <p class="text-body-sm text-gray-200 mb-4">Respect for your private home.</p>
+                            <div class="opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-[400ms] ease-out-expo delay-[50ms]">
+                                <span class="btn-secondary btn-sm w-max self-start">
+                                    Read more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#services" class="slide focus:outline-none focus-visible:ring-4 focus-visible:ring-accent relative h-[420px] rounded-[32px] overflow-hidden cursor-pointer group/card flex-shrink-0 block">
+                    <img src="./Photos/services-commercial.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[700ms] ease-out-expo group-hover/card:scale-[1.03]" alt="Commercial Cleaning" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800'" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent opacity-90 transition-opacity"></div>
+                    <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-20">
+                        <div class="translate-y-8 group-hover/card:-translate-y-2 transition-transform duration-[500ms] ease-out-expo flex flex-col justify-end h-full">
+                            <h3 class="text-h3 text-white mb-2">Commercial</h3>
+                            <p class="text-body-sm text-gray-200 mb-4">Reliable service for business.</p>
+                            <div class="opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-[400ms] ease-out-expo delay-[50ms]">
+                                <span class="btn-secondary btn-sm w-max self-start">
+                                    Read more <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Optional empty space at end to allow last card to scroll left -->
+                <div class="w-[20px] md:w-[60px] flex-shrink-0"></div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="absolute bottom-6 right-6 md:bottom-10 md:right-10 flex gap-4 z-30 opacity-0 group-hover/slider-container:opacity-100 transition-opacity duration-300">
+                <button id="slider-prev" class="w-12 h-12 rounded-full bg-surface-dark/80 backdrop-blur border border-white/10 text-white flex items-center justify-center hover:bg-brand transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Previous slide">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button id="slider-next" class="w-12 h-12 rounded-full bg-surface-dark/80 backdrop-blur border border-white/10 text-white flex items-center justify-center hover:bg-brand transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Next slide">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        </div>
+
+        <div class="container-default relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-gray-900">
+                <div>
+                    <div class="text-stat mb-1 md:mb-3">
+                        99<span class="text-brand font-medium">%</span>
+                    </div>
+                    <p class="text-body-sm text-gray-600 max-w-[200px]">
+                        Customer satisfaction for all homes and offices we maintain.
+                    </p>
+                </div>
+                <div>
+                    <div class="text-stat mb-1 md:mb-3">
+                        250<span class="text-brand font-medium">+</span>
+                    </div>
+                    <p class="text-body-sm text-gray-600 max-w-[200px]">
+                        Satisfied clients who trust us with their home or workspace.
+                    </p>
+                </div>
+                <div>
+                    <div class="text-stat mb-1 md:mb-3">
+                        98<span class="text-brand font-medium">%</span>
+                    </div>
+                    <p class="text-body-sm text-gray-600 max-w-[200px]">
+                        On-time arrival rate for scheduled appointments.
+                    </p>
+                </div>
+                <div>
+                    <div class="text-stat mb-1 md:mb-3">
+                        20<span class="text-brand font-medium">+</span>
+                    </div>
+                    <p class="text-body-sm text-gray-600 max-w-[200px]">
+                        Years of professional cleaning experience you can rely on.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEATLY SOCIAL PROOF -->
+    <section class="py-24 md:py-32 bg-white border-b border-gray-100">
+        <div class="container-default text-center">
+            <h3 class="text-h3 text-gray-900 mb-16 md:mb-20 reveal">We're a top-notch 5-star contractor!</h3>
+            
+            <div class="flex flex-wrap lg:flex-nowrap justify-center items-center gap-12 md:gap-16 lg:gap-24">
+                <!-- Google -->
+                <div class="flex flex-col items-center gap-4 reveal delay-[100ms]">
+                    <div class="h-16 md:h-24 flex items-center justify-center">
+                        <img src="./Assets/opinions websites/Google logo.svg" alt="Google" class="h-14 md:h-20 w-auto object-contain" />
+                    </div>
+                    <div class="flex gap-1.5">
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                    </div>
+                </div>
+
+                <!-- Angi -->
+                <div class="flex flex-col items-center gap-4 reveal delay-[200ms]">
+                    <div class="h-16 md:h-24 flex items-center justify-center">
+                        <img src="./Assets/opinions websites/Angi logo.svg" alt="Angi" class="h-16 md:h-24 w-auto object-contain" />
+                    </div>
+                    <div class="flex gap-1.5">
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                    </div>
+                </div>
+
+                <!-- Yelp -->
+                <div class="flex flex-col items-center gap-4 reveal delay-[300ms]">
+                    <div class="h-16 md:h-24 flex items-center justify-center">
+                        <img src="./Assets/opinions websites/Yelp logo.svg" alt="Yelp" class="h-14 md:h-20 w-auto object-contain" />
+                    </div>
+                    <div class="flex gap-1.5">
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                    </div>
+                </div>
+
+                <!-- Trustpilot -->
+                <div class="flex flex-col items-center gap-4 reveal delay-[400ms]">
+                    <div class="h-16 md:h-24 flex items-center justify-center">
+                        <img src="./Assets/opinions websites/Trustpilot logo.svg" alt="Trustpilot" class="h-10 md:h-14 w-auto object-contain" />
+                    </div>
+                    <div class="flex gap-1.5">
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                        <i data-lucide="star" class="w-6 h-6 md:w-7 md:h-7 fill-social-star text-social-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-[#E9F0FA] relative border-t border-brand/10">
+        <div class="container-default">
+            
+            <!-- HEADER -->
+            <div class="grid lg:grid-cols-2 gap-12 items-end mb-16 md:mb-20">
+                <div>
+                    <div class="pill-eyebrow w-[150px]">
+                        <div class="animate-marquee-fast gap-2">
+                            <span>OUR SERVICES &nbsp;&bull;&nbsp; OUR SERVICES &nbsp;&bull;&nbsp; OUR SERVICES &nbsp;&bull;&nbsp;</span>
+                            <span>OUR SERVICES &nbsp;&bull;&nbsp; OUR SERVICES &nbsp;&bull;&nbsp; OUR SERVICES &nbsp;&bull;&nbsp;</span>
+                            <span>OUR SERVICES &nbsp;&bull;&nbsp; OUR SERVICES &nbsp;&bull;&nbsp; OUR SERVICES &nbsp;&bull;&nbsp;</span>
+                        </div>
+                    </div>
+                    <h2 class="text-h2 text-gray-900 reveal">
+                        Services that make<br/> your space <span class="text-brand">shine.</span>
+                    </h2>
+                </div>
+                <div class="lg:pb-2">
+                    <p class="text-body-lg text-gray-700 max-w-md lg:ml-auto">
+                        Whether it's your home or your office, our reliable cleaning pros deliver fresh, spotless spaces with care, consistency, and attention to every detail.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-brand/10">
+                
+                <!-- ITEM 1 -->
+                <div class="border-b border-brand/10 group reveal delay-[100ms]">
+                    <button class="service-btn w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] py-8 md:py-10 text-left flex flex-col md:flex-row md:items-start gap-4 md:gap-12 hover:bg-brand/5 transition-colors px-4 -mx-4 rounded-2xl md:-mx-8 md:px-8 cursor-pointer">
+                        <div class="text-brand w-16 flex-shrink-0 mt-1">
+                            <i data-lucide="app-window" class="w-8 h-8"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-h3 text-gray-900 mb-2">Window Cleaning</h3>
+                            <p class="text-body text-gray-700 max-w-xl">
+                                Comprehensive interior and exterior cleaning, including screens and sills for crystal clear views.
+                            </p>
+                        </div>
+                        <div class="text-brand flex-shrink-0 mt-2 md:mt-0 transition-transform duration-300 flex items-center justify-center">
+                            <i data-lucide="plus" class="w-7 h-7 lucide-plus"></i>
+                            <i data-lucide="x" class="w-7 h-7 lucide-x hidden"></i>
+                        </div>
+                    </button>
+                    
+                    <div class="service-content px-4 md:px-0 md:ml-28 md:pr-12">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pb-10 pt-4">
+        <div class="w-full h-[250px] md:h-[340px] rounded-[32px] overflow-hidden relative">
+                                <img src="./Photos/services-window-cleaning.png" alt="Window Cleaning" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800'" />
+                            </div>
+        
+        <div class="flex flex-col justify-center pb-4">
+            <div class="flex flex-wrap gap-3 mb-10">
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Interior & Exterior</span>
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Screen Cleaning</span>
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Track & Sill Wipedown</span>
+                        </div>
+            <div class="flex flex-col lg:flex-row gap-6 lg:justify-start lg:items-center pb-4">
+                                <a href="#kontakt" class="btn-primary group">
+                                    <span>Book Service</span>
+                                    <div class="btn-icon">
+                                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                    </div>
+                                </a>
+                                <a href="window-cleaning.html" class="btn-text text-gray-900 group">
+                                    Read more <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="border-b border-brand/10 group reveal delay-[200ms]">
+                    <button class="service-btn w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] py-8 md:py-10 text-left flex flex-col md:flex-row md:items-start gap-4 md:gap-12 hover:bg-brand/5 transition-colors px-4 -mx-4 rounded-2xl md:-mx-8 md:px-8 cursor-pointer">
+                        <div class="text-brand w-16 flex-shrink-0 mt-1">
+                            <i data-lucide="leaf" class="w-8 h-8"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-h3 text-gray-900 mb-2">Gutter Cleaning</h3>
+                            <p class="text-body text-gray-700 max-w-xl">
+                                Hand-cleaned for maximum safety and precision. We protect your home by avoiding risky pressure washers.
+                            </p>
+                        </div>
+                        <div class="text-brand flex-shrink-0 mt-2 md:mt-0 transition-transform duration-300 flex items-center justify-center">
+                            <i data-lucide="plus" class="w-7 h-7 lucide-plus"></i>
+                            <i data-lucide="x" class="w-7 h-7 lucide-x hidden"></i>
+                        </div>
+                    </button>
+                    
+                    <div class="service-content px-4 md:px-0 md:ml-28 md:pr-12">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pb-10 pt-4">
+        <div class="w-full h-[250px] md:h-[340px] rounded-[32px] overflow-hidden relative">
+                                <img src="./Photos/services-gutter-cleaning.png" alt="Gutter Cleaning" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" onerror="this.src='./Photos/services-gutter-cleaning.png'" />
+                            </div>
+        
+        <div class="flex flex-col justify-center pb-4">
+            <div class="flex flex-wrap gap-3 mb-10">
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Hand-Cleaning</span>
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Downspout Flushing</span>
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Debris Removal</span>
+                        </div>
+            <div class="flex flex-col lg:flex-row gap-6 lg:justify-start lg:items-center pb-4">
+                                <a href="#kontakt" class="btn-primary group">
+                                    <span>Book Service</span>
+                                    <div class="btn-icon">
+                                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                    </div>
+                                </a>
+                                <a href="gutter-cleaning.html" class="btn-text text-gray-900 group">
+                                    Read more <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="border-b border-brand/10 group reveal delay-[300ms]">
+                    <button class="service-btn w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] py-8 md:py-10 text-left flex flex-col md:flex-row md:items-start gap-4 md:gap-12 hover:bg-brand/5 transition-colors px-4 -mx-4 rounded-2xl md:-mx-8 md:px-8 cursor-pointer">
+                        <div class="text-brand w-16 flex-shrink-0 mt-1">
+                            <i data-lucide="home" class="w-8 h-8"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-h3 text-gray-900 mb-2">Residential Cleaning</h3>
+                            <p class="text-body text-gray-700 max-w-xl">
+                                Routine and deep cleaning designed to keep your home fresh, comfortable, and welcoming at all times.
+                            </p>
+                        </div>
+                        <div class="text-brand flex-shrink-0 mt-2 md:mt-0 transition-transform duration-300 flex items-center justify-center">
+                            <i data-lucide="plus" class="w-7 h-7 lucide-plus"></i>
+                            <i data-lucide="x" class="w-7 h-7 lucide-x hidden"></i>
+                        </div>
+                    </button>
+                    
+                    <div class="service-content px-4 md:px-0 md:ml-28 md:pr-12">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pb-10 pt-4">
+        <div class="w-full h-[250px] md:h-[340px] rounded-[32px] overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800" alt="Residential Cleaning" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800'" />
+                            </div>
+        
+        <div class="flex flex-col justify-center pb-4">
+            <div class="flex flex-wrap gap-3 mb-10">
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Regular Cleaning</span>
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Dusting & Vacuuming</span>
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Kitchen & Bath</span>
+                        </div>
+            <div class="flex flex-col lg:flex-row gap-6 lg:justify-start lg:items-center pb-4">
+                                <a href="#kontakt" class="btn-primary group">
+                                    <span>Book Service</span>
+                                    <div class="btn-icon">
+                                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                    </div>
+                                </a>
+                                <a href="services.html#residential" class="btn-text text-gray-900 group">
+                                    Read more <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="border-b border-brand/10 group reveal delay-[400ms]">
+                    <button class="service-btn w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] py-8 md:py-10 text-left flex flex-col md:flex-row md:items-start gap-4 md:gap-12 hover:bg-brand/5 transition-colors px-4 -mx-4 rounded-2xl md:-mx-8 md:px-8 cursor-pointer">
+                        <div class="text-brand w-16 flex-shrink-0 mt-1">
+                            <i data-lucide="building-2" class="w-8 h-8"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-h3 text-gray-900 mb-2">Commercial Cleaning</h3>
+                            <p class="text-body text-gray-700 max-w-xl">
+                                Professional cleaning solutions that maintain a clean, healthy, and productive work environment.
+                            </p>
+                        </div>
+                        <div class="text-brand flex-shrink-0 mt-2 md:mt-0 transition-transform duration-300 flex items-center justify-center">
+                            <i data-lucide="plus" class="w-7 h-7 lucide-plus"></i>
+                            <i data-lucide="x" class="w-7 h-7 lucide-x hidden"></i>
+                        </div>
+                    </button>
+                    
+                    <div class="service-content px-4 md:px-0 md:ml-28 md:pr-12">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center pb-10 pt-4">
+        <div class="w-full h-[250px] md:h-[340px] rounded-[32px] overflow-hidden relative">
+                                <img src="./Photos/services-commercial.png" alt="Commercial Cleaning" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800'" />
+                            </div>
+        
+        <div class="flex flex-col justify-center pb-4">
+            <div class="flex flex-wrap gap-3 mb-10">
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Office Spaces</span>
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Trash Removal</span>
+                            <span class="bg-white text-brand-dark px-4 py-2 rounded-full text-body-sm shadow-sm">Common Areas</span>
+                        </div>
+            <div class="flex flex-col lg:flex-row gap-6 lg:justify-start lg:items-center pb-4">
+                                <a href="#kontakt" class="btn-primary group">
+                                    <span>Book Service</span>
+                                    <div class="btn-icon">
+                                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                    </div>
+                                </a>
+                                <a href="services.html#commercial" class="btn-text text-gray-900 group">
+                                    Read more <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+        </div>
+    </div>
+</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about-us" class="p-5 bg-white">
+        <div class="w-full mx-auto max-w-[1920px] reveal">
+            <div class="relative w-full h-[600px] md:h-[700px] rounded-[32px] md:rounded-[40px] overflow-hidden shadow-card group">
+                <img src="./Photos/team_image.png" alt="Our Cleaning Team" class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[10s] ease-out" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600'" />
+                
+                <div class="absolute bottom-0 left-0 w-full md:w-[650px] md:bottom-10 md:left-10 bg-brand-pastel p-8 md:p-14 rounded-t-[32px] md:rounded-[40px] shadow-2xl z-10">
+                    <div class="pill-eyebrow w-[150px]">
+                        <div class="animate-marquee-fast gap-2">
+                            <span>MEET THE TEAM &nbsp;&bull;&nbsp; MEET THE TEAM &nbsp;&bull;&nbsp; MEET THE TEAM &nbsp;&bull;&nbsp;</span>
+                            <span>MEET THE TEAM &nbsp;&bull;&nbsp; MEET THE TEAM &nbsp;&bull;&nbsp; MEET THE TEAM &nbsp;&bull;&nbsp;</span>
+                            <span>MEET THE TEAM &nbsp;&bull;&nbsp; MEET THE TEAM &nbsp;&bull;&nbsp; MEET THE TEAM &nbsp;&bull;&nbsp;</span>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-h3 text-surface-dark mb-8">
+                        Honest pricing. Zero surprises. Our family-owned team is fully insured and respects your home.
+                    </h2>
+                    
+                    <a href="about.html" class="btn-primary">
+                            <span>About Us</span>
+                            <div class="btn-icon">
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B LOGOS -->
+    <section class="py-24 bg-white border-b border-gray-100 overflow-hidden">
+        <div class="container-default text-center">
+            <p class="text-sm text-gray-500 font-bold mb-8 uppercase tracking-wide">Trusted for over 20 years by:</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 transition-opacity hover:opacity-100 duration-500">
+                <div class="font-heading font-bold text-xl md:text-2xl">Lifetime Fitness</div>
+                <div class="font-heading font-bold text-xl md:text-2xl">Athletico</div>
+                <div class="font-heading font-bold text-xl md:text-2xl">Lamborghini Dealer</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL WALL -->
+    <section class="py-24 bg-surface" id="reviews">
+        <div class="container-default text-center">
+            
+            <!-- Headline matching our style -->
+            <div class="pill-eyebrow w-[150px] mb-6 mx-auto">
+                        <div class="animate-marquee-fast gap-2">
+                            <span>REAL FEEDBACK &nbsp;&bull;&nbsp; REAL FEEDBACK &nbsp;&bull;&nbsp; REAL FEEDBACK &nbsp;&bull;&nbsp;</span>
+                            <span>REAL FEEDBACK &nbsp;&bull;&nbsp; REAL FEEDBACK &nbsp;&bull;&nbsp; REAL FEEDBACK &nbsp;&bull;&nbsp;</span>
+                            <span>REAL FEEDBACK &nbsp;&bull;&nbsp; REAL FEEDBACK &nbsp;&bull;&nbsp; REAL FEEDBACK &nbsp;&bull;&nbsp;</span>
+                        </div>
+                    </div>
+            <h2 class="text-h2 text-gray-900 mb-16 md:mb-20 reveal">
+                People trust us.<br/> We have a <span class="text-brand font-medium">4.9/5 Rating.</span>
+            </h2>
+
+            <!-- Testimonials Wrapper with fade out -->
+            <div class="relative max-h-[700px] overflow-hidden mb-12">
+                <div class="columns-1 md:columns-2 lg:columns-3 gap-6 text-left">
+                    
+                    <!-- Card 1 -->
+                    <div class="break-inside-avoid mb-6 bg-white p-8 rounded-[32px] shadow-sm border border-gray-100 transition-transform hover:-translate-y-1 reveal">
+                        <div class="flex gap-1 text-social-star mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-body text-gray-700 mb-6 font-medium leading-relaxed">
+                            "Exceptional service. Windows are sparkling like new, and the crew worked efficiently and quietly. We will be regular customers. Completely transparent pricing."
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">Warren, Rolling Meadows</div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="break-inside-avoid mb-6 bg-white p-8 rounded-[32px] shadow-sm border border-gray-100 transition-transform hover:-translate-y-1 reveal delay-[100ms]">
+                        <div class="flex gap-1 text-social-star mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-body text-gray-700 mb-6 font-medium leading-relaxed">
+                            "The best cleaning company I've ever dealt with. They highly respect the client's home and wear shoe covers. Complete professionalism from start to finish."
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">Kevin P., Schaumburg</div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="break-inside-avoid mb-6 bg-white p-8 rounded-[32px] shadow-sm border border-gray-100 transition-transform hover:-translate-y-1 reveal delay-[200ms]">
+                        <div class="flex gap-1 text-social-star mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-body text-gray-700 mb-6 font-medium leading-relaxed">
+                            "I was honestly skeptical about hiring a cleaning service because every place I tried before was either rushed or careless. This team surprised me. Organized every surface, and somehow made our office look twice as bright. Absolutely worth it."
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">Sarah L., Palatine</div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="break-inside-avoid mb-6 bg-white p-8 rounded-[32px] shadow-sm border border-gray-100 transition-transform hover:-translate-y-1 reveal delay-[300ms]">
+                        <div class="flex gap-1 text-social-star mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-body text-gray-700 mb-6 font-medium leading-relaxed">
+                            "I use their gutter cleaning services every year. Always reliable, punctual, and they leave the area around the house perfectly clean. Highly recommend if you want peace of mind."
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">Mike T., Arlington Heights</div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="break-inside-avoid mb-6 bg-white p-8 rounded-[32px] shadow-sm border border-gray-100 transition-transform hover:-translate-y-1 reveal delay-[400ms]">
+                        <div class="flex gap-1 text-social-star mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-body text-gray-700 mb-6 font-medium leading-relaxed">
+                            "Fast, polite and unbelievably thorough."
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">Jessica M., Mount Prospect</div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="break-inside-avoid mb-6 bg-white p-8 rounded-[32px] shadow-sm border border-gray-100 transition-transform hover:-translate-y-1 reveal delay-[500ms]">
+                        <div class="flex gap-1 text-social-star mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-body text-gray-700 mb-6 font-medium leading-relaxed">
+                            "Exactly what I needed after a crazy week. They use natural products, which matters a lot with my allergies."
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">David B., Hoffman Estates</div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="break-inside-avoid mb-6 bg-white p-8 rounded-[32px] shadow-sm border border-gray-100 transition-transform hover:-translate-y-1" reveal delay-[300ms]>
+                        <div class="flex gap-1 text-social-star mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-body text-gray-700 mb-6 font-medium leading-relaxed">
+                            "I've tried a few services in the Chicago area, but none compare to Clean Art Works. Their attention to detail on our post-construction clean was mind-blowing."
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">Amanda R., Barrington</div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="break-inside-avoid mb-6 bg-white p-8 rounded-[32px] shadow-sm border border-gray-100 transition-transform hover:-translate-y-1" reveal delay-[350ms]>
+                        <div class="flex gap-1 text-social-star mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-body text-gray-700 mb-6 font-medium leading-relaxed">
+                            "Outstanding work on my very neglected gutters. The team was safe, quick, and showed me before/after photos."
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">John D., Inverness</div>
+                    </div>
+
+                </div>
+                
+                <!-- Gradient Fade Out Overlay -->
+                <div class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-surface to-transparent pointer-events-none"></div>
+            </div>
+            
+            <!-- Button at the bottom -->
+            <div class="flex justify-center relative z-10">
+                <a href="reviews.html" class="btn-primary">
+                    <span>Show All Reviews</span>
+                    <div class="btn-icon">
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="py-24 bg-[#f8f9fa] relative border-t border-gray-100" id="why-choose-us">
+        <div class="container-default">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Side Content -->
+                <div class="lg:col-span-5">
+                    <div class="pill-eyebrow w-[150px] mb-6">
+                        <div class="animate-marquee-fast gap-2">
+                            <span>WHY CHOOSE US &nbsp;&bull;&nbsp; WHY CHOOSE US &nbsp;&bull;&nbsp; WHY CHOOSE US &nbsp;&bull;&nbsp;</span>
+                            <span>WHY CHOOSE US &nbsp;&bull;&nbsp; WHY CHOOSE US &nbsp;&bull;&nbsp; WHY CHOOSE US &nbsp;&bull;&nbsp;</span>
+                            <span>WHY CHOOSE US &nbsp;&bull;&nbsp; WHY CHOOSE US &nbsp;&bull;&nbsp; WHY CHOOSE US &nbsp;&bull;&nbsp;</span>
+                        </div>
+                    </div>
+                    <h2 class="text-h2 text-gray-900 mb-6 reveal">
+                        Cleaning that goes<br/> <span class="text-brand">beyond</span> expectations.
+                    </h2>
+                    <p class="text-body-lg text-gray-700 mb-10 reveal delay-[100ms]">
+                        We combine experience, reliability, and attention to detail to deliver exceptional cleaning services. Our team is dedicated to making every home and workspace spotless, on time, and with complete customer satisfaction.
+                    </p>
+                    <div class="flex items-center gap-6 reveal delay-[200ms]">
+                        <a href="#kontakt" class="btn-primary group">
+                            <span>Book Now</span>
+                            <div class="btn-icon">
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </a>
+                        <a href="about.html" class="btn-text text-gray-900">
+                            Our Process <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side Grid -->
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4 md:gap-6">
+                    
+                    <!-- Card 1 (Dark) -->
+                    <div class="bg-surface-dark p-8 md:p-10 rounded-[32px] text-white flex flex-col justify-between h-[280px]">
+                        <i data-lucide="zap" class="w-8 h-8 text-accent mb-auto"></i>
+                        <div>
+                            <h3 class="text-h4 mb-3">Fast service</h3>
+                            <p class="text-body-sm text-gray-300">We respond quickly and finish on time, keeping your space clean when you need it.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 (Light) -->
+                    <div class="bg-white p-8 md:p-10 rounded-[32px] shadow-sm border border-gray-100 flex flex-col justify-between h-[280px] sm:mt-12">
+                        <i data-lucide="award" class="w-8 h-8 text-brand mb-auto"></i>
+                        <div>
+                            <h3 class="text-h4 text-gray-900 mb-3">Experienced team</h3>
+                            <p class="text-body-sm text-gray-600">Our cleaners are trained and skilled, ensuring professional results every single visit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 (Light) -->
+                    <div class="bg-white p-8 md:p-10 rounded-[32px] shadow-sm border border-gray-100 flex flex-col justify-between h-[280px] sm:-mt-12">
+                        <i data-lucide="leaf" class="w-8 h-8 text-brand mb-auto"></i>
+                        <div>
+                            <h3 class="text-h4 text-gray-900 mb-3">Natural products</h3>
+                            <p class="text-body-sm text-gray-600">We use eco-friendly supplies that protect your home, your family, and the planet.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 (Dark) -->
+                    <div class="bg-surface-dark p-8 md:p-10 rounded-[32px] text-white flex flex-col justify-between h-[280px]">
+                        <i data-lucide="tag" class="w-8 h-8 text-accent mb-auto"></i>
+                        <div>
+                            <h3 class="text-h4 mb-3">Affordable pricing</h3>
+                            <p class="text-body-sm text-gray-300">Affordable rates that give you high-quality cleaning without stretching your budget.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ABOUT US -->
+    <!-- CTA / SPECIAL OFFER -->
+    <section class="py-24 bg-[#f8f9fa] relative" id="special-offer">
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-[#CEDEF9]"></div>
+        <div class="container-full relative z-10">
+            
+            <!-- Cleanora Testimonial-style Wrapper -->
+            <div class="bg-surface-dark p-4 md:p-5 lg:p-6 rounded-[40px] shadow-xl border border-white/5">
+                <div class="grid lg:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
+                    
+                    <!-- Left: Image with floating badge -->
+                    <div class="relative rounded-[32px] overflow-hidden h-[400px] lg:h-[500px] reveal">
+                        <img src="./Photos/cta%20image.jpg" alt="Special Offer Cleaning" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800'" />
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-6 left-6 bg-surface-dark text-white p-6 md:px-8 rounded-[24px] max-w-[240px] shadow-xl">
+                            <div class="text-accent font-heading font-black text-3xl md:text-4xl mb-2">10% OFF</div>
+                            <div class="text-sm font-bold text-white leading-tight mb-1">Satisfaction Guaranteed!</div>
+                            <div class="text-xs text-gray-400">Offer expires in 90 days</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Content Box -->
+                    <div class="bg-surface-dark rounded-[32px] p-8 md:p-12 lg:p-16 relative overflow-hidden flex flex-col justify-center reveal delay-[150ms]">
+                        <!-- Giant Background Icon -->
+                        <i data-lucide="percent" class="absolute -top-12 -right-12 w-80 h-80 text-white opacity-[0.03] transform -rotate-12 pointer-events-none"></i>
+                        
+                        <!-- Header / Tag -->
+                        <div class="pill-eyebrow w-[150px] mb-8 relative z-10">
+                        <div class="animate-marquee-fast gap-2">
+                            <span>SPECIAL OFFER &nbsp;&bull;&nbsp; SPECIAL OFFER &nbsp;&bull;&nbsp; SPECIAL OFFER &nbsp;&bull;&nbsp;</span>
+                            <span>SPECIAL OFFER &nbsp;&bull;&nbsp; SPECIAL OFFER &nbsp;&bull;&nbsp; SPECIAL OFFER &nbsp;&bull;&nbsp;</span>
+                            <span>SPECIAL OFFER &nbsp;&bull;&nbsp; SPECIAL OFFER &nbsp;&bull;&nbsp; SPECIAL OFFER &nbsp;&bull;&nbsp;</span>
+                        </div>
+                    </div>
+                        
+                        <!-- Main Text -->
+                        <h2 class="text-h3 md:text-h2 text-white mb-6 relative z-10 leading-tight">
+                            Save <span class="text-accent">10%</span> on window and gutter cleaning service if <span class="text-accent">ordered together.</span>
+                        </h2>
+                        
+                        <p class="text-gray-400 text-body mb-12 relative z-10 max-w-md">
+                            Clean Art Works, Inc. is happy to provide this exclusive package. Not valid with any other offer.
+                        </p>
+                        
+                        <!-- Buttons -->
+                        <div class="flex flex-wrap items-center gap-8 relative z-10 mt-auto lg:mt-0">
+                            <a href="#kontakt" class="btn-primary">
+                                <span>Book a Service</span>
+                                <div class="btn-icon">
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </div>
+                            </a>
+                            <a href="#services" class="btn-secondary group">
+                                Explore Services <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="py-24 bg-gradient-to-b from-[#CEDEF9] to-white" id="kontakt">
+        <div class="container-default">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-12 items-center">
+                
+                <div class="bg-surface-dark p-8 md:p-12 rounded-[32px] relative overflow-hidden reveal">
+                    
+
+                    <form action="#" class="space-y-5 relative z-10">
+                        <div class="mb-8 pb-6 border-b border-white/10">
+                            <h3 class="text-h3 text-white mb-2">Request a Free Quote</h3>
+                            <p class="text-body-sm text-gray-300 flex items-center gap-2">
+                                <i data-lucide="clock" class="w-4 h-4 text-accent"></i> 
+                                We usually reply within <strong class="text-white">24 hours</strong>.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <input type="text" required placeholder="First Name *" class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors text-body-sm placeholder-gray-400">
+                            <input type="text" required placeholder="Last Name *" class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors text-body-sm placeholder-gray-400">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <input type="email" required placeholder="Email Address *" class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors text-body-sm placeholder-gray-400">
+                            <input type="tel" required placeholder="Phone Number *" class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors text-body-sm placeholder-gray-400">
+                        </div>
+                        <input type="text" required placeholder="Address for Quote * (e.g. 123 Main St)" class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors text-body-sm placeholder-gray-400">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <select required class="select-dark w-full bg-white/5 border border-white/10 text-white rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors text-body-sm">
+                                <option value="" disabled selected class="text-gray-900">Choose a Service *</option>
+                                <option value="window" class="text-gray-900">Window Cleaning</option>
+                                <option value="gutter" class="text-gray-900">Gutter Cleaning</option>
+                                <option value="both" class="text-gray-900">Both Services</option>
+                            </select>
+                            <select required class="select-dark w-full bg-white/5 border border-white/10 text-white rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors text-body-sm">
+                                <option value="" disabled selected class="text-gray-900">Property Type *</option>
+                                <option value="residential" class="text-gray-900">Residential</option>
+                                <option value="commercial" class="text-gray-900">Commercial</option>
+                            </select>
+                        </div>
+                        <textarea rows="3" placeholder="Your Message (Optional)" class="w-full bg-white/5 border border-white/10 text-white rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white/10 transition-colors text-body-sm placeholder-gray-400 resize-none"></textarea>
+                        
+                        
+                        <div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+                            <button type="submit" class="btn-primary">
+                                <span>Request a Quote</span>
+                                <div class="btn-icon">
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <p class="text-left text-xs text-gray-400 flex items-center gap-1.5">
+                                <i data-lucide="lock" class="w-3.5 h-3.5"></i> Your data is 100% secure.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="lg:pl-8 reveal delay-[150ms]">
+                    <div class="pill-eyebrow w-[150px] mb-6">
+                        <div class="animate-marquee-fast gap-2">
+                            <span>CONTACT &nbsp;&bull;&nbsp; CONTACT &nbsp;&bull;&nbsp; CONTACT &nbsp;&bull;&nbsp;</span>
+                            <span>CONTACT &nbsp;&bull;&nbsp; CONTACT &nbsp;&bull;&nbsp; CONTACT &nbsp;&bull;&nbsp;</span>
+                            <span>CONTACT &nbsp;&bull;&nbsp; CONTACT &nbsp;&bull;&nbsp; CONTACT &nbsp;&bull;&nbsp;</span>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-h2 text-gray-900 mb-6 reveal">
+                        Book your cleaning <br/> service <span class="text-brand">today.</span>
+                    </h2>
+                    
+                    <p class="text-body-lg text-gray-600 mb-10 max-w-md">
+                        Looking for a reliable cleaning service? Contact our team anytime and we'll help you find the perfect solution for your home or business.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-5">
+                            <div class="w-14 h-14 bg-[#2F589E] rounded-[20px] flex items-center justify-center text-white flex-shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div class="pt-1">
+                                <h4 class="text-h4 text-gray-900 mb-1">Email Address</h4>
+                                <a href="mailto:contact@cleanartworks.com" class="text-body-sm text-gray-500 hover:text-brand transition-colors">contact@cleanartworks.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-5">
+                            <div class="w-14 h-14 bg-[#2F589E] rounded-[20px] flex items-center justify-center text-white flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div class="pt-1">
+                                <h4 class="text-h4 text-gray-900 mb-1">Phone Number</h4>
+                                <a href="tel:6309352525" class="text-body-sm text-gray-500 hover:text-brand transition-colors">(630) 935-2525</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-5">
+                            <div class="w-14 h-14 bg-[#2F589E] rounded-[20px] flex items-center justify-center text-white flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div class="pt-1">
+                                <h4 class="text-h4 text-gray-900 mb-1">Service Area</h4>
+                                <p class="text-body-sm text-gray-500">Schaumburg, Palatine, Arlington Heights & Surrounding Areas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- CITIES STRIP -->
+    <div class="bg-surface-dark border-b border-white/10 py-8 overflow-hidden whitespace-nowrap flex w-full">
+        <div class="flex animate-marquee">
+            <div class="flex space-x-4 md:space-x-8 lg:space-x-12 px-4 md:px-8 text-white/70 text-xs md:text-sm font-bold tracking-widest uppercase items-center flex-shrink-0">
+                <span>SCHAUMBURG</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>PALATINE</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>BARRINGTON</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>BARTLETT</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>BLOOMINGDALE</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>ST. CHARLES</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>GLENVIEW</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>NORTHBROOK</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>HIGHLAND PARK</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>ITASCA</span>
+                <span class="text-accent opacity-50">|</span>
+            </div>
+            <div class="flex space-x-4 md:space-x-8 lg:space-x-12 px-4 md:px-8 text-white/70 text-xs md:text-sm font-bold tracking-widest uppercase items-center flex-shrink-0">
+                <span>SCHAUMBURG</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>PALATINE</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>BARRINGTON</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>BARTLETT</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>BLOOMINGDALE</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>ST. CHARLES</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>GLENVIEW</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>NORTHBROOK</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>HIGHLAND PARK</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>ITASCA</span>
+                <span class="text-accent opacity-50">|</span>
+            </div>
+            <div class="flex space-x-4 md:space-x-8 lg:space-x-12 px-4 md:px-8 text-white/70 text-xs md:text-sm font-bold tracking-widest uppercase items-center flex-shrink-0">
+                <span>SCHAUMBURG</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>PALATINE</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>BARRINGTON</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>BARTLETT</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>BLOOMINGDALE</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>ST. CHARLES</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>GLENVIEW</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>NORTHBROOK</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>HIGHLAND PARK</span>
+                <span class="text-accent opacity-50">|</span>
+                <span>ITASCA</span>
+                <span class="text-accent opacity-50">|</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-surface-dark pt-16 pb-8 border-t border-white/5 relative">
+        <div class="container-default text-white">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+                <div class="lg:col-span-4">
+                    <img src="./Logo/Logo-primary.svg" alt="Clean Art Works" class="h-40 md:h-48 w-auto mb-8 brightness-0 invert" onerror="this.onerror=null; this.src=\'./Logo/Logo-white.png\';" />
+                    
+                    
+                    
+                    
+                    <h4 class="text-h4 text-white mb-4">Working Time</h4>
+                    <p class="text-body-sm text-gray-400 mb-1">Monday to Saturday: 8 am - 6 pm</p>
+                    <p class="text-body-sm text-gray-400 mb-8">Sunday is closed.</p>
+                    
+                    <!-- Service Magic Seal -->
+                    <img src="./Assets/Service magic seal.png" alt="Service Magic Seal" class="h-16 md:h-24 w-auto" />
+                </div>
+                
+                <div class="lg:col-span-2 lg:col-start-6">
+                    <h4 class="text-h4 text-white mb-6">Website</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-body-sm text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-body-sm text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#reviews" class="text-body-sm text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+                        <li><a href="index.html#faq" class="text-body-sm text-gray-400 hover:text-white transition-colors">FAQ's</a></li>
+                        <li><a href="index.html#kontakt" class="text-body-sm text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            
+                <div class="lg:col-span-2">
+                    <h4 class="text-h4 text-white mb-6">Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="window-cleaning.html" class="text-body-sm text-gray-400 hover:text-white transition-colors">Window Cleaning</a></li>
+                        <li><a href="gutter-cleaning.html" class="text-body-sm text-gray-400 hover:text-white transition-colors">Gutter Cleaning</a></li>
+                    </ul>
+                </div>
+            
+                <div class="lg:col-span-3">
+                    <h4 class="text-h4 text-white mb-6">Contact</h4>
+                    <ul class="space-y-4 mb-8">
+                        <li><a href="mailto:contact@cleanartworks.com" class="text-body-sm text-gray-400 hover:text-white transition-colors">contact@cleanartworks.com</a></li>
+                        <li><a href="tel:6309352525" class="text-body-sm text-gray-400 hover:text-white transition-colors">(630) 935-2525</a></li>
+                    </ul>
+                    
+                    <!-- Social Icons -->
+                    <h4 class="text-h4 text-white mb-4">Follow Us & Reviews</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors group">
+                            <img src="./Assets/social media icons/facebook.svg" class="w-5 h-5 brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all" alt="Facebook" />
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors group">
+                            <img src="./Assets/social media icons/Instagram.svg" class="w-5 h-5 brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all" alt="Instagram" />
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors group">
+                            <img src="./Assets/social media icons/google.svg" class="w-5 h-5 brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all" alt="Google" />
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors group">
+                            <img src="./Assets/social media icons/yelp.svg" class="w-5 h-5 brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all" alt="Yelp" />
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors group">
+                            <img src="./Assets/social media icons/angi.svg" class="w-5 h-5 brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all" alt="Angi" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-center md:text-left">
+                    <p class="text-body-sm text-gray-400">
+                        &copy; <span id="current-year"></span> Clean Art Works. All rights reserved.
+                    </p>
+                    <a href="privacy-policy.html" class="text-body-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                </div>
+                
+                <!-- Payment Icons -->
+                <div class="flex items-center gap-2 flex-wrap justify-center">
+                    <img src="./Assets/Payments/Payments Visa.svg" alt="Visa" class="h-6 w-auto" />
+                    <img src="./Assets/Payments/Payments Mastercard.svg" alt="Mastercard" class="h-6 w-auto" />
+                    <img src="./Assets/Payments/Payments AMEX.svg" alt="Amex" class="h-6 w-auto" />
+                    <img src="./Assets/Payments/Payments GPay.svg" alt="Google Pay" class="h-6 w-auto" />
+                    <img src="./Assets/Payments/Payments Apple Pay.svg" alt="Apple Pay" class="h-6 w-auto" />
+                    <img src="./Assets/Payments/Payments PayPal.svg" alt="PayPal" class="h-6 w-auto" />
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    
+    <!-- Core Application Logic -->
+    <script src="./main.js"></script>
+</body>
+</html>
