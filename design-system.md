@@ -4,13 +4,13 @@ Ten plik stanowi definicję całego systemu wizualnego (Design System) dla proje
 
 ## 1. Brand Colors (Token: `brand`)
 Główna paleta kolorystyczna oparta o niebieskie odcienie czystości.
-- **Primary:** `#2656A1` (`bg-brand`, `text-brand`) - Używany do głównych przycisków i akcentów.
-- **Dark:** `#0F3056` - Ciemniejszy odcień przycisków na :hover.
+- **Primary:** `#145A5E` (`bg-brand`, `text-brand`) - Używany do głównych przycisków i akcentów.
+- **Dark:** `#103B3E` - Ciemniejszy odcień przycisków na :hover.
 - **Light:** `#EAF2FF` - Delikatne, jasnoniebieskie tła.
 - **Pastel / Pastel Dark / Pastel Hover:** Zestaw specjalnych błękitów używany np. w sekcji About Us.
 
 ## 2. Accents & Surfaces
-- **Accent:** `#FCB734` (`bg-accent`, `text-accent`) - Jasna, żarowiasta limonka przyciągająca wzrok do CTA (Call To Action).
+- **Accent:** `#F2704A` (`bg-accent`, `text-accent`) - Jasna, żarowiasta limonka przyciągająca wzrok do CTA (Call To Action).
 - **Surface (Tła):**
   - Domyślne tło strony: `#F8F9FB`
   - Ciemna sekcja (Hero/Stopka): `#0B1B36`

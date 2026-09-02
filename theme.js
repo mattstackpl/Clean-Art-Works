@@ -140,9 +140,9 @@ const twStyles = `
     .pill-eyebrow { @apply text-label inline-flex items-center bg-[#2F589E] text-white py-1.5 rounded-full mb-4 shadow-sm overflow-hidden relative whitespace-nowrap; }
 
     /* Button System (Cleanora Style) */
-    .btn-primary { @apply inline-flex items-center gap-4 bg-accent text-surface-dark font-heading font-medium text-base pl-6 pr-[6px] py-[6px] rounded-full transition-all hover:brightness-110; }
+    .btn-primary { @apply inline-flex items-center gap-4 bg-brand text-white font-heading font-medium text-base pl-6 pr-[6px] py-[6px] rounded-full transition-all hover:brightness-110 hover:shadow-bubbly; }
     .btn-primary .btn-icon {
-        @apply w-10 h-10 rounded-full bg-surface-dark text-white flex items-center justify-center transition-transform duration-300 flex-shrink-0;
+        @apply w-10 h-10 rounded-full bg-white text-brand flex items-center justify-center transition-transform duration-300 flex-shrink-0;
     }
     .btn-primary:hover .btn-icon svg {
         transform: scale(1.2);
