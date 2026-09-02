@@ -60,13 +60,13 @@ window.tailwind.config = {
 const twStyles = `
 @layer components {
         .btn-secondary {
-            @apply inline-flex items-center justify-center gap-2 text-white border-2 border-accent rounded-full font-heading font-medium px-6 py-2 transition-all duration-300;
+            @apply inline-flex items-center justify-center gap-2 text-white border-2 border-brand rounded-full font-heading font-medium px-6 py-2 transition-all duration-300;
         }
         .btn-secondary-dark {
-            @apply inline-flex items-center justify-center gap-2 text-surface-dark border-2 border-accent rounded-full font-heading font-medium px-6 py-2 transition-all duration-300;
+            @apply inline-flex items-center justify-center gap-2 text-surface-dark border-2 border-brand rounded-full font-heading font-medium px-6 py-2 transition-all duration-300;
         }
         .btn-secondary:hover, .btn-secondary-dark:hover {
-            @apply border-accent-hover;
+            @apply border-brand-dark;
         }
         .btn-secondary i {
             @apply flex items-center justify-center transition-all duration-300 ease-out-expo text-white;
@@ -75,7 +75,7 @@ const twStyles = `
             @apply flex items-center justify-center transition-all duration-300 ease-out-expo text-surface-dark;
         }
         .btn-secondary:hover i, .btn-secondary-dark:hover i {
-            @apply text-accent scale-110 bg-transparent;
+            @apply text-brand scale-110 bg-transparent;
         }
         .btn-secondary.btn-sm, .btn-secondary-dark.btn-sm {
             @apply px-4 py-1.5 text-sm;
@@ -96,7 +96,7 @@ const twStyles = `
         }
         .btn-text::after {
             content: '';
-            @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-accent transition-all duration-300 ease-out-expo;
+            @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-brand transition-all duration-300 ease-out-expo;
         }
         .btn-text:hover::after {
             @apply w-full;
