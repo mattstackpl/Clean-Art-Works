@@ -219,10 +219,10 @@
             <div class="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none"></div>
             <div class="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none"></div>
             
-            <button id="slider-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-gray-100 text-gray-900 flex items-center justify-center hover:bg-brand hover:text-white transition-colors focus:outline-none opacity-0 group-hover/slider-container:opacity-100 duration-300" aria-label="Previous slide">
+            <button id="slider-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-gray-100 text-gray-900 flex items-center justify-center hover:bg-brand hover:text-white transition-colors focus:outline-none opacity-100 md:opacity-0 md:group-hover/slider-container:opacity-100 duration-300" aria-label="Previous slide">
                 <i data-lucide="chevron-left" class="w-6 h-6"></i>
             </button>
-            <button id="slider-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-gray-100 text-gray-900 flex items-center justify-center hover:bg-brand hover:text-white transition-colors focus:outline-none opacity-0 group-hover/slider-container:opacity-100 duration-300" aria-label="Next slide">
+            <button id="slider-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-gray-100 text-gray-900 flex items-center justify-center hover:bg-brand hover:text-white transition-colors focus:outline-none opacity-100 md:opacity-0 md:group-hover/slider-container:opacity-100 duration-300" aria-label="Next slide">
                 <i data-lucide="chevron-right" class="w-6 h-6"></i>
             </button>
 
@@ -494,7 +494,7 @@
             </div>
         </div>
 
-        <div class="container-default mt-8 relative z-20 flex justify-end items-center pr-4 md:pr-12">
+        <div class="container-default mt-8 relative z-20 flex justify-center items-center">
             <a href="index.html#reviews" class="btn-text text-gray-900 hover:text-brand transition-colors">
                 See all testimonials <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
@@ -918,21 +918,21 @@
                         </div>
                     </div>
 
-                    <!-- Card 3 (Light) -->
-                    <div class="bg-white p-6 md:p-10 rounded-[32px] shadow-sm border border-gray-100 flex flex-col justify-between h-auto md:h-[280px] gap-6 md:gap-0 sm:-mt-12">
-                        <i data-lucide="leaf" class="w-8 h-8 text-brand mb-2 md:mb-auto"></i>
+                    <!-- Card 3 (Dark) -->
+                    <div class="bg-surface-dark p-6 md:p-10 rounded-[32px] text-white flex flex-col justify-between h-auto md:h-[280px] gap-6 md:gap-0 sm:-mt-12">
+                        <i data-lucide="leaf" class="w-8 h-8 text-brand-light mb-2 md:mb-auto"></i>
                         <div>
-                            <h3 class="text-h4 text-gray-900 mb-3">Natural products</h3>
-                            <p class="text-body-sm text-gray-600">We use eco-friendly supplies that protect your home, your family, and the planet.</p>
+                            <h3 class="text-h4 mb-3">Natural products</h3>
+                            <p class="text-body-sm text-gray-300">We use eco-friendly supplies that protect your home, your family, and the planet.</p>
                         </div>
                     </div>
 
-                    <!-- Card 4 (Dark) -->
-                    <div class="bg-surface-dark p-6 md:p-10 rounded-[32px] text-white flex flex-col justify-between h-auto md:h-[280px] gap-6 md:gap-0">
-                        <i data-lucide="tag" class="w-8 h-8 text-brand-light mb-2 md:mb-auto"></i>
+                    <!-- Card 4 (Light) -->
+                    <div class="bg-white p-6 md:p-10 rounded-[32px] shadow-sm border border-gray-100 flex flex-col justify-between h-auto md:h-[280px] gap-6 md:gap-0">
+                        <i data-lucide="tag" class="w-8 h-8 text-brand mb-2 md:mb-auto"></i>
                         <div>
-                            <h3 class="text-h4 mb-3">Affordable pricing</h3>
-                            <p class="text-body-sm text-gray-300">Affordable rates that give you high-quality cleaning without stretching your budget.</p>
+                            <h3 class="text-h4 text-gray-900 mb-3">Affordable pricing</h3>
+                            <p class="text-body-sm text-gray-600">Affordable rates that give you high-quality cleaning without stretching your budget.</p>
                         </div>
                     </div>
 
@@ -1376,7 +1376,7 @@
                     </div>
                     <div>
                         <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-6">Follow Us</h4>
-                    <div class="flex flex-wrap gap-3">
+                    <div class="flex flex-wrap gap-x-3 gap-y-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand transition-colors group">
                             <img src="./Assets/social media icons/facebook.svg" class="w-5 h-5 brightness-0 invert transition-all" alt="Facebook" />
                         </a>
@@ -1394,6 +1394,8 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            </div>
             </div>
             
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
