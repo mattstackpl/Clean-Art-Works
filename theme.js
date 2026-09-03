@@ -1,6 +1,6 @@
 // theme.js
-// Ten plik definiuje i wstrzykuje Design System (kolory i tokeny typograficzne)
-// Rozwiązanie to pozwala korzystać z potęgi dyrektyw @apply Tailwind CDN bezpośrednio z dysku lokalnego (file://)
+// This file defines and injects the Design System (colors and typography tokens)
+// This solution allows using the power of Tailwind CDN @apply directives directly from the local disk (file://)
 
 window.tailwind = window.tailwind || {};
 window.tailwind = window.tailwind || {};

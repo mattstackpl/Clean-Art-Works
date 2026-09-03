@@ -1,19 +1,19 @@
 // main.js
-// Główny plik z logiką interakcji dla całej strony
+// Main interaction logic file for the entire website
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Inicjalizacja Ikon Lucide
+    // 1. Initialize Lucide Icons
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
 
-    // 2. Automatyczny rok w stopce
+    // 2. Automatic year in the footer
     const yearEl = document.getElementById('current-year');
     if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
     }
 
-    // 3. Efekt pływającego menu przy scrollowaniu (Navbar Scroll)
+    // 3. Floating menu effect on scroll (Navbar Scroll)
     const headerInner = document.getElementById('header-inner');
     if (headerInner) {
         window.addEventListener('scroll', () => {
@@ -27,14 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Logika Menu Mobilnego
+    // 4. Mobile Menu Logic
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
     const mobileLinks = document.querySelectorAll('.mobile-link');
     
-    // Services dropdown w mobile
+    // Services dropdown on mobile
     const mobileServicesBtn = document.getElementById('mobile-services-btn');
     const mobileServicesMenu = document.getElementById('mobile-services-menu');
     const mobileServicesIcon = document.getElementById('mobile-services-icon');
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Zamykanie menu po kliknięciu poza nim
+    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
             if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4.5. Logika Akordeonów Services
+    // 4.5. Services Accordion Logic
     const serviceBtns = document.querySelectorAll('.service-btn');
     serviceBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const iconPlus = btn.querySelector('.lucide-plus');
             const iconX = btn.querySelector('.lucide-x');
             
-            // Zamknij pozostałe
+            // Close others
             document.querySelectorAll('.service-content').forEach(otherContent => {
                 if (otherContent !== content && otherContent.classList.contains('open')) {
                     otherContent.classList.remove('open');
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Przełącz obecny
+            // Toggle current
             content.classList.toggle('open');
             if (content.classList.contains('open')) {
                 if (iconPlus) iconPlus.classList.add('hidden');
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Logika Akordeonów FAQ
+    // 5. FAQ Accordion Logic
     const faqBtns = document.querySelectorAll('.faq-btn');
     
     faqBtns.forEach(btn => {
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const content = btn.nextElementSibling;
             const icon = btn.querySelector('.faq-icon');
             
-            // Zamykanie innych otwartych elementów
+            // Close other opened elements
             document.querySelectorAll('.faq-content').forEach(otherContent => {
                 if (otherContent !== content && otherContent.classList.contains('open')) {
                     otherContent.classList.remove('open');
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Otwieranie / Zamykanie klikniętego
+            // Open / Close clicked element
             content.classList.toggle('open');
             
             if (content.classList.contains('open')) {
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Logika Slidera Hero (Continuous Glide + Manual)
+    // 7. Hero Slider Logic (Continuous Glide + Manual)
     const heroSlider = document.getElementById('hero-slider');
     const sliderPrev = document.getElementById('slider-prev');
     const sliderNext = document.getElementById('slider-next');
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let isInteracting = false;
         let resumeTimeout;
         const gap = 32; // 2rem
-        let speed = 1; // piksele na klatkę
+        let speed = 1; // pixels per frame
 
         const play = () => {
             if (!isInteracting) {
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (heroSlider.scrollLeft >= setWidth) {
                 heroSlider.scrollLeft -= setWidth;
             } else if (heroSlider.scrollLeft <= 0) {
-                // Pozwala na nieskończone przewijanie w lewo
+                // Allows infinite scrolling to the left
                 heroSlider.scrollLeft += setWidth;
             }
         });
@@ -190,14 +190,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             heroSlider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
             
-            // Wznów po zakończeniu płynnego przewijania
+            // Resume after smooth scrolling finishes
             resume(800);
         };
 
         sliderNext.addEventListener('click', () => manualScroll(1));
         sliderPrev.addEventListener('click', () => manualScroll(-1));
 
-        // Eventy zatrzymujące
+        // Pause events
         heroSlider.parentElement.addEventListener('mouseenter', stop);
         heroSlider.parentElement.addEventListener('mouseleave', () => resume(0));
         heroSlider.parentElement.addEventListener('touchstart', stop, {passive: true});
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(play);
     }
 
-    // 8. Obsługa formularza kontaktowego (UX states)
+    // 8. Contact form handling (UX states)
     const contactForm = document.querySelector('form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
