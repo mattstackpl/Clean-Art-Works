@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     
     <!-- Core External Libraries -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,20 +26,19 @@
                 <img src="./Logo/Logo-horizontal-primary.svg" alt="Clean Art Works" class="h-8 md:h-11 w-auto" />
             </a>
 
-            <nav class="hidden lg:flex items-center gap-6 lg:gap-8 text-body text-gray-700">
-                <a href="index.html" class="hover:text-brand transition-colors">Home</a>
+            <nav class="hidden lg:flex items-center gap-6 lg:gap-8 text-sm font-semibold uppercase tracking-wider text-gray-700">
                 <a href="about.html" class="hover:text-brand transition-colors">About Us</a>
                 
                 <!-- Dropdown Services -->
                 <div class="relative group py-2">
-                    <button class="text-body flex items-center gap-1 hover:text-brand transition-colors focus:outline-none">
+                    <button class="uppercase font-semibold text-sm tracking-wider flex items-center gap-1 hover:text-brand transition-colors focus:outline-none">
                         Services <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
                     </button>
                     <div class="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 bg-white rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-focus-within:opacity-100 group-hover:visible group-focus-within:visible transition-all duration-300 flex flex-col p-2 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto">
-                        <a href="window-cleaning.html" class="text-body px-4 py-3 text-gray-700 hover:bg-brand/5 hover:text-brand rounded-xl transition-colors flex items-center justify-between group/link">
+                        <a href="window-cleaning.html" class="text-sm font-semibold uppercase tracking-wider px-4 py-3 text-gray-700 hover:bg-brand/5 hover:text-brand rounded-xl transition-colors flex items-center justify-between group/link">
                             Window Cleaning <i data-lucide="arrow-right" class="w-4 h-4 opacity-0 -translate-x-2 transition-all group-hover/link:opacity-100 group-hover/link:translate-x-0"></i>
                         </a>
-                        <a href="gutter-cleaning.html" class="text-body px-4 py-3 text-gray-700 hover:bg-brand/5 hover:text-brand rounded-xl transition-colors flex items-center justify-between group/link">
+                        <a href="gutter-cleaning.html" class="text-sm font-semibold uppercase tracking-wider px-4 py-3 text-gray-700 hover:bg-brand/5 hover:text-brand rounded-xl transition-colors flex items-center justify-between group/link">
                             Gutter Cleaning <i data-lucide="arrow-right" class="w-4 h-4 opacity-0 -translate-x-2 transition-all group-hover/link:opacity-100 group-hover/link:translate-x-0"></i>
                         </a>
                     </div>
@@ -66,24 +65,23 @@
     </div>
 
     <div id="mobile-menu" class="hidden absolute top-20 left-4 right-4 bg-white rounded-3xl shadow-xl border border-gray-100 p-4 flex flex-col gap-2 z-50">
-        <a href="index.html" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Home</a>
-        <a href="about.html" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">About Us</a>
+        <a href="about.html" class="text-sm font-semibold uppercase tracking-wider p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">About Us</a>
         
         <div class="flex flex-col">
-            <button id="mobile-services-btn" class="w-full flex items-center justify-between text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl transition-colors focus:outline-none">
+            <button id="mobile-services-btn" class="w-full flex items-center justify-between text-sm font-semibold uppercase tracking-wider p-4 text-gray-800 hover:bg-brand/5 rounded-2xl transition-colors focus:outline-none">
                 Services <i data-lucide="chevron-down" id="mobile-services-icon" class="w-4 h-4 transition-transform"></i>
             </button>
             <div id="mobile-services-menu" class="hidden flex-col gap-1 pl-4 pr-4 pb-2 border-l-2 border-brand/20 ml-6 mt-1">
-                <a href="window-cleaning.html" class="text-body p-3 text-gray-700 hover:bg-brand/5 rounded-xl mobile-link transition-colors">Window Cleaning</a>
-                <a href="gutter-cleaning.html" class="text-body p-3 text-gray-700 hover:bg-brand/5 rounded-xl mobile-link transition-colors">Gutter Cleaning</a>
+                <a href="window-cleaning.html" class="text-sm font-semibold uppercase tracking-wider p-3 text-gray-700 hover:bg-brand/5 rounded-xl mobile-link transition-colors">Window Cleaning</a>
+                <a href="gutter-cleaning.html" class="text-sm font-semibold uppercase tracking-wider p-3 text-gray-700 hover:bg-brand/5 rounded-xl mobile-link transition-colors">Gutter Cleaning</a>
             </div>
         </div>
         
-        <a href="index.html#reviews" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Testimonials</a>
-        <a href="index.html#faq" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">FAQ's</a>
-        <a href="index.html#kontakt" class="text-body p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Contact</a>
+        <a href="index.html#reviews" class="text-sm font-semibold uppercase tracking-wider p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Testimonials</a>
+        <a href="index.html#faq" class="text-sm font-semibold uppercase tracking-wider p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">FAQ's</a>
+        <a href="index.html#kontakt" class="text-sm font-semibold uppercase tracking-wider p-4 text-gray-800 hover:bg-brand/5 rounded-2xl mobile-link transition-colors">Contact</a>
         
-        <a href="tel:6309352525" class="text-body font-medium flex items-center justify-center gap-2 bg-brand text-white p-4 rounded-full mt-2">
+        <a href="tel:6309352525" class="text-sm font-semibold uppercase tracking-wider flex items-center justify-center gap-2 bg-brand text-white p-4 rounded-full mt-2">
             <i data-lucide="phone" class="w-5 h-5"></i> Call: (630) 935-2525
         </a>
     </div>
