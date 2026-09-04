@@ -125,6 +125,16 @@ const twStyles = `
         }
     .container-full { @apply w-full px-[20px]; }
 
+    
+    /* FAQ Accordion Chevron */
+    details.faq-accordion summary .faq-chevron {
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+    }
+    details.faq-accordion[open] summary .faq-chevron {
+        transform: rotate(90deg);
+    }
+
     /* Typography System */
     .text-display-hero { @apply font-heading font-bold text-[3.25rem] md:text-6xl lg:text-[4.5rem] leading-[1.05] tracking-tight; }
     .text-display-huge { @apply font-heading font-bold text-[3.5rem] md:text-[5rem] lg:text-[6rem] leading-[0.9] tracking-tighter; }
