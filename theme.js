@@ -152,6 +152,7 @@ const twStyles = `
     .text-body-sm { @apply font-sans font-medium text-sm md:text-[15px] leading-relaxed; }
 
     .text-nav { @apply font-sans font-semibold text-sm tracking-wider uppercase; }
+    .text-footer-link { @apply font-sans font-semibold text-sm md:text-[15px]; }
     .text-label { @apply font-heading font-medium text-[10px] md:text-xs uppercase tracking-widest; }
     
     .pill-eyebrow { @apply text-label inline-flex items-center bg-brand text-white py-1.5 rounded-full mb-4 shadow-sm overflow-hidden relative whitespace-nowrap; }
