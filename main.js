@@ -140,34 +140,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Hero Slider Logic (Continuous Glide + Manual)
-    const heroSlider = document.getElementById('hero-slider');
-    const sliderPrev = document.getElementById('slider-prev');
-    const sliderNext = document.getElementById('slider-next');
+    // 7. Generic Slider Logic (Continuous Glide + Manual)
+    function initSlider(sliderId, prevId, nextId, numSlidesInSet, speedVal = 1) {
+        const slider = document.getElementById(sliderId);
+        const prevBtn = document.getElementById(prevId);
+        const nextBtn = document.getElementById(nextId);
 
-    if (heroSlider && sliderPrev && sliderNext) {
+        if (!slider || !prevBtn || !nextBtn) return;
+
         let isInteracting = false;
         let resumeTimeout;
         const gap = 32; // 2rem
-        let speed = 1; // pixels per frame
+        let speed = speedVal; // pixels per frame
 
         const play = () => {
             if (!isInteracting) {
-                heroSlider.scrollLeft += speed;
+                slider.scrollLeft += speed;
             }
             requestAnimationFrame(play);
         };
 
         // Infinite loop logic on scroll (handles both auto and manual scrolling)
-        heroSlider.addEventListener('scroll', () => {
-            const slideWidth = heroSlider.querySelector('.slide').offsetWidth;
-            const setWidth = 4 * (slideWidth + gap);
+        slider.addEventListener('scroll', () => {
+            const slideWidth = slider.querySelector('.slide').offsetWidth;
+            const setWidth = numSlidesInSet * (slideWidth + gap);
 
-            if (heroSlider.scrollLeft >= setWidth) {
-                heroSlider.scrollLeft -= setWidth;
-            } else if (heroSlider.scrollLeft <= 0) {
+            if (slider.scrollLeft >= setWidth) {
+                slider.scrollLeft -= setWidth;
+            } else if (slider.scrollLeft <= 0) {
                 // Allows infinite scrolling to the left
-                heroSlider.scrollLeft += setWidth;
+                slider.scrollLeft += setWidth;
             }
         });
 
@@ -185,24 +187,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const manualScroll = (direction) => {
             stop();
-            const slideWidth = heroSlider.querySelector('.slide').offsetWidth;
+            const slideWidth = slider.querySelector('.slide').offsetWidth;
             const scrollAmount = slideWidth + gap;
             
-            heroSlider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
             
             // Resume after smooth scrolling finishes
             resume(800);
         };
 
-        sliderNext.addEventListener('click', () => manualScroll(1));
-        sliderPrev.addEventListener('click', () => manualScroll(-1));
+        nextBtn.addEventListener('click', () => manualScroll(1));
+        prevBtn.addEventListener('click', () => manualScroll(-1));
 
         // Pause events
-        heroSlider.parentElement.addEventListener('mouseenter', stop);
-        heroSlider.parentElement.addEventListener('mouseleave', () => resume(0));
-        heroSlider.parentElement.addEventListener('touchstart', stop, {passive: true});
-        heroSlider.parentElement.addEventListener('touchend', () => resume(1200), {passive: true});
-        heroSlider.parentElement.addEventListener('wheel', () => {
+        slider.parentElement.addEventListener('mouseenter', stop);
+        slider.parentElement.addEventListener('mouseleave', () => resume(0));
+        slider.parentElement.addEventListener('touchstart', stop, {passive: true});
+        slider.parentElement.addEventListener('touchend', () => resume(1200), {passive: true});
+        slider.parentElement.addEventListener('wheel', () => {
             stop();
             resume(1200);
         }, {passive: true});
@@ -210,6 +212,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start
         requestAnimationFrame(play);
     }
+
+    initSlider('hero-slider', 'slider-prev', 'slider-next', 4, 1);
+    initSlider('testimonials-slider', 'test-prev', 'test-next', 4, 1);
+
 
     // 8. Contact form handling (UX states)
     const contactForm = document.querySelector('form');
