@@ -112,34 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. FAQ Accordion Logic
-    const faqBtns = document.querySelectorAll('.faq-btn');
-    
-    faqBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('.faq-icon');
-            
-            // Close other opened elements
-            document.querySelectorAll('.faq-content').forEach(otherContent => {
-                if (otherContent !== content && otherContent.classList.contains('open')) {
-                    otherContent.classList.remove('open');
-                    const otherIcon = otherContent.previousElementSibling.querySelector('.faq-icon');
-                    if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
-                }
-            });
-
-            // Open / Close clicked element
-            content.classList.toggle('open');
-            
-            if (content.classList.contains('open')) {
-                if (icon) icon.style.transform = 'rotate(-180deg)'; 
-            } else {
-                if (icon) icon.style.transform = 'rotate(0deg)';
-            }
-        });
-    });
-
     // 7. Generic Slider Logic (Continuous Glide + Manual)
     function initSlider(sliderId, prevId, nextId, numSlidesInSet, speedVal = 1) {
         const slider = document.getElementById(sliderId);

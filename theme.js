@@ -127,12 +127,14 @@ const twStyles = `
 
     
     /* FAQ Accordion Chevron */
-    details.faq-accordion summary .faq-chevron {
-        transform: rotate(0deg);
-        transition: transform 0.3s ease;
+    details.faq-accordion summary .faq-chevron svg {
+        transition: transform 0.3s ease !important;
     }
-    details.faq-accordion[open] summary .faq-chevron {
-        transform: rotate(90deg);
+    details.faq-accordion:not([open]) summary .faq-chevron svg {
+        transform: rotate(-90deg) !important;
+    }
+    details.faq-accordion[open] summary .faq-chevron svg {
+        transform: rotate(0deg) !important;
     }
 
     /* Typography System */
