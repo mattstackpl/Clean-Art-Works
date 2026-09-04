@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(play);
     }
 
-    initSlider('hero-slider', 'slider-prev', 'slider-next', 4, 1);
+    initSlider('hero-slider', 'slider-prev', 'slider-next', 5, 1);
     initSlider('testimonials-slider', 'test-prev', 'test-next', 4, 1);
 
 
