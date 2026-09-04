@@ -135,9 +135,9 @@ const twStyles = `
     .text-h3 { @apply font-heading font-bold text-2xl md:text-3xl leading-snug; }
     .text-h4 { @apply font-heading font-bold text-lg md:text-xl leading-snug; }
 
-    .text-body-lg { @apply font-sans font-normal text-[17px] md:text-lg leading-relaxed; }
-    .text-body { @apply font-sans font-normal text-base leading-relaxed; }
-    .text-body-sm { @apply font-sans font-normal text-sm md:text-[15px] leading-relaxed; }
+    .text-body-lg { @apply font-sans font-medium text-[17px] md:text-lg leading-relaxed; }
+    .text-body { @apply font-sans font-medium text-base leading-relaxed; }
+    .text-body-sm { @apply font-sans font-medium text-sm md:text-[15px] leading-relaxed; }
 
     .text-label { @apply font-heading font-medium text-[10px] md:text-xs uppercase tracking-widest; }
     
