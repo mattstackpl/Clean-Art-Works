@@ -174,9 +174,12 @@ const twStyles = `
     .btn-primary .btn-icon {
         @apply w-10 h-10 rounded-full bg-white text-brand flex items-center justify-center transition-transform duration-300 flex-shrink-0;
     }
+    .btn-primary:hover .btn-icon {
+        @apply translate-x-1;
+    }
     .btn-primary:hover .btn-icon svg {
-        transform: scale(1.2);
-        transition: transform 0.3s ease;
+        transform: scale(1.1) rotate(-4deg);
+        transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     }
     
     
@@ -185,8 +188,8 @@ const twStyles = `
         @apply w-full;
     }
     .btn-secondary:hover svg {
-        transform: scale(1.2);
-        transition: transform 0.3s ease;
+        transform: scale(1.1) rotate(-4deg) translateX(4px);
+        transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     /* Custom Form Elements */
