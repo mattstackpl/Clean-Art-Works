@@ -64,10 +64,10 @@ window.tailwind.config = {
 const twStyles = `
 @layer components {
         .btn-secondary {
-            @apply inline-flex items-center justify-center gap-2 text-white border-2 border-white rounded-full font-heading font-medium px-6 py-2 transition-all duration-300;
+            @apply inline-flex items-center justify-center gap-2 text-white border-2 border-white rounded-full font-heading font-bold px-6 py-2 transition-all duration-300;
         }
         .btn-secondary-dark {
-            @apply inline-flex items-center justify-center gap-2 text-surface-dark border-2 border-brand rounded-full font-heading font-medium px-6 py-2 transition-all duration-300;
+            @apply inline-flex items-center justify-center gap-2 text-surface-dark border-2 border-brand rounded-full font-heading font-bold px-6 py-2 transition-all duration-300;
         }
         .btn-secondary:hover, .btn-secondary-dark:hover {
             @apply border-brand;
@@ -144,7 +144,7 @@ const twStyles = `
     .pill-eyebrow { @apply text-label inline-flex items-center bg-brand text-white py-1.5 rounded-full mb-4 shadow-sm overflow-hidden relative whitespace-nowrap; }
 
     /* Button System (Cleanora Style) */
-    .btn-primary { @apply inline-flex items-center gap-4 bg-brand text-white font-heading font-medium text-base pl-6 pr-[6px] py-[6px] rounded-full transition-all hover:brightness-110 hover:shadow-bubbly; }
+    .btn-primary { @apply inline-flex items-center gap-4 bg-brand text-white font-heading font-bold text-base pl-6 pr-[6px] py-[6px] rounded-full transition-all hover:brightness-110 hover:shadow-bubbly; }
     .btn-primary .btn-icon {
         @apply w-10 h-10 rounded-full bg-white text-brand flex items-center justify-center transition-transform duration-300 flex-shrink-0;
     }
