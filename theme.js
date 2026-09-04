@@ -150,7 +150,7 @@ const twStyles = `
         }
         .link-animated::after {
             content: '';
-            @apply absolute left-0 -bottom-0.5 w-0 h-[1px] bg-current transition-all duration-300 ease-out-expo;
+            @apply absolute left-0 -bottom-0.5 w-0 h-[1px] bg-brand transition-all duration-300 ease-out-expo;
         }
         .link-animated:hover::after {
             @apply w-full;
