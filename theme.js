@@ -238,11 +238,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 /* City Marquee */
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-33.3333%); } }
 .animate-marquee { display: flex; width: max-content; animation: marquee 40s linear infinite; }
-.animate-marquee:hover { animation-play-state: paused; }
 
 @keyframes marquee-fast { 0% { transform: translateX(0); } 100% { transform: translateX(-33.3333%); } }
 .animate-marquee-fast { display: flex; align-items: center; white-space: nowrap; width: max-content; animation: marquee-fast 15s linear infinite; }
-.animate-marquee-fast:hover { animation-play-state: paused; }
 
 `;
 
