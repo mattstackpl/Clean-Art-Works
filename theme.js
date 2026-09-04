@@ -144,6 +144,18 @@ const twStyles = `
     .pill-eyebrow { @apply text-label inline-flex items-center bg-brand text-white py-1.5 rounded-full mb-4 shadow-sm overflow-hidden relative whitespace-nowrap; }
 
     /* Button System (Cleanora Style) */
+    
+        .link-animated {
+            @apply relative inline-block transition-colors duration-300;
+        }
+        .link-animated::after {
+            content: '';
+            @apply absolute left-0 -bottom-0.5 w-0 h-[1px] bg-current transition-all duration-300 ease-out-expo;
+        }
+        .link-animated:hover::after {
+            @apply w-full;
+        }
+
     .btn-primary { @apply inline-flex items-center gap-4 bg-brand text-white font-heading font-bold text-base pl-6 pr-[6px] py-[6px] rounded-full transition-all hover:brightness-110 hover:shadow-bubbly; }
     .btn-primary .btn-icon {
         @apply w-10 h-10 rounded-full bg-white text-brand flex items-center justify-center transition-transform duration-300 flex-shrink-0;
