@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (headerInner) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
-                headerInner.classList.add('shadow-md');
-                headerInner.classList.remove('shadow-[0_8px_30px_rgba(0,0,0,0.08)]');
+                headerInner.classList.add('shadow-[0_4px_12px_rgba(37,99,235,0.08)]');
+                headerInner.classList.remove('shadow-[0_8px_30px_rgba(37,99,235,0.06)]');
             } else {
-                headerInner.classList.add('shadow-[0_8px_30px_rgba(0,0,0,0.08)]');
-                headerInner.classList.remove('shadow-md');
+                headerInner.classList.add('shadow-[0_8px_30px_rgba(37,99,235,0.06)]');
+                headerInner.classList.remove('shadow-[0_4px_12px_rgba(37,99,235,0.08)]');
             }
         });
     }
